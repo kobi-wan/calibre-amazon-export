@@ -12,7 +12,7 @@
 - Place the export button below the cover's sample controls and match the displayed cover width.
 
 ## 0.5.0
-- English userscript and Windows helper interfaces, documentation and launcher.
+- Updated userscript and Windows helper interfaces, documentation and launcher.
 
 ## 0.4.1
 - Warn when an audiobook edition is selected.
@@ -34,3 +34,4 @@
 
 ## 0.1.0
 - Initial OPF export and native calibre clipboard helper.
+
