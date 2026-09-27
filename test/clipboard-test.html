@@ -1,0 +1,20 @@
+<!doctype html><html lang="de"><meta charset="utf-8"><title>calibre Clipboard-Test</title>
+<h1>Firefox-Zwischenablagetest</h1>
+<p>Über http://localhost:8765/test/clipboard-test.html öffnen. Der Schreibtest ersetzt die Zwischenablage nur bei Erfolg. Ein Browser-Erfolg beweist noch keine native Erkennung in calibre.</p>
+<p>Eine exportierte OPF-Datei auswählen: <input type="file" id="file" accept=".opf"></p>
+<button id="probe">Unterstützung anzeigen (ohne Schreiben)</button>
+<button id="write">Natives calibre-Format schreiben</button>
+<pre id="result"></pre>
+<script>
+const MIME='application/calibre-book-metadata';
+const result=document.getElementById('result');
+let opf='';
+document.getElementById('file').onchange=async e=>{opf=await e.target.files[0].text();};
+document.getElementById('probe').onclick=()=>{
+  result.textContent=JSON.stringify({userAgent:navigator.userAgent,secureContext:isSecureContext,clipboard:!!navigator.clipboard,ClipboardItem:typeof ClipboardItem,native:globalThis.ClipboardItem?.supports?.(MIME),webCustom:globalThis.ClipboardItem?.supports?.('web '+MIME)},null,2);
+};
+document.getElementById('write').onclick=async()=>{
+  try {if(!opf)throw Error('Zuerst OPF auswählen.');await navigator.clipboard.write([new ClipboardItem({[MIME]:new Blob([opf],{type:MIME})})]);result.textContent='Browser meldet Erfolg. Nun native Erkennung in calibre mit einem Testbuch prüfen.';}
+  catch(e){result.textContent=e.name+': '+e.message+'\nFallback: OPF-Datei mit dem lokalen Helfer öffnen.';}
+};
+</script></html>
