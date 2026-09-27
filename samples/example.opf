@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="bookid">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<dc:title>Die Prüfung &amp; das Rätsel</dc:title>
+<dc:creator opf:role="aut">Anna Müller</dc:creator>
+<dc:identifier id="bookid">B08NWCLGCV</dc:identifier>
+<dc:identifier opf:scheme="amazon_de">B08NWCLGCV</dc:identifier>
+<dc:identifier opf:scheme="isbn">9783161484100</dc:identifier>
+<dc:publisher>Test &amp; Sohn</dc:publisher>
+<dc:date>2024-03-15</dc:date>
+<dc:language>deu</dc:language>
+<dc:description>&lt;p&gt;Ein Rätsel &amp;amp; ein &amp;lt;Geheimnis&amp;gt;.&lt;/p&gt;</dc:description>
+<dc:subject>Krimis &amp; Thriller</dc:subject>
+<meta name="calibre:series" content="Die Prüfungen"/>
+<meta name="calibre:series_index" content="2"/>
+</metadata>
+<manifest/>
+<spine/>
+</package>
