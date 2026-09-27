@@ -1,6 +1,6 @@
 # calibre Amazon Export — Proof of Concept
 
-**Version 0.5.3 — First GitHub release.** A Firefox userscript reads metadata from an open Amazon book page. A small Windows helper converts the exported text to calibre's native clipboard format. No calibre plugin is required.
+**Version 0.5.3 — First GitHub release.** A browser userscript reads metadata from an open Amazon book page. A small Windows helper converts the exported text to calibre's native clipboard format. No calibre plugin is required.
 
 ## Downloads
 
@@ -14,7 +14,7 @@ The userscript checks published releases for updates according to your userscrip
 
 ## Requirements and installation
 
-- Firefox with Greasemonkey / Tampermonkey / Violentmonkey.
+- Your favorite browser with a userscript extension (Greasemonkey / Tampermonkey / Violentmonkey etc.).
 - Windows with calibre installed. The launcher expects `%ProgramFiles%\Calibre2\calibre-debug.exe`; edit that path for other installations. The helper uses calibre's bundled Python and Qt.
 - Install `calibre-amazon-export.user.js` in your userscript manager, including its complete header. Keep `Copy to calibre clipboard.cmd` beside the `tools` folder containing `opf_clipboard.py`.
 
@@ -73,6 +73,7 @@ This is a PoC, not a packaged cross-platform application. Nothing is installed i
 
 
 The entry button requires a product URL, a product title and a recognized Books or Kindle category in the product breadcrumbs. Search filters and global navigation do not count. If the category cannot be identified, the button stays hidden; delayed category content is checked automatically.
+
 
 
 
