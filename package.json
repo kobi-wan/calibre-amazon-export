@@ -1,0 +1,10 @@
+{
+  "name": "calibre-amazon-export-poc",
+  "version": "0.5.3",
+  "private": true,
+  "scripts": {"test": "node --test test/unit.test.cjs", "test:browser": "node test/browser.cjs"},
+  "devDependencies": {"playwright": "^1.55.0"}
+}
+
+
+

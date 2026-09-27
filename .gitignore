@@ -1,0 +1,9 @@
+node_modules/
+test/output/
+__pycache__/
+*.pyc
+/*.opf
+/*.json
+!/package.json
+!/package-lock.json
+/dist/
